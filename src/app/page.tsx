@@ -1,10 +1,9 @@
-import Image from "next/image";
-import { Toolbar } from "@/components/toolbar"
+import { Toolbar } from '@/components/toolbar'
 
 export default function Home() {
-  return (
-    <main className="px-8 py-4 container max-w-sm mx-auto">
-      <Toolbar />
-    </main>
-  );
+	return (
+		<main className="container mx-auto max-w-sm px-8 py-4">
+			<Toolbar />
+		</main>
+	)
 }
