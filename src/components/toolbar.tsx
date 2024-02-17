@@ -7,7 +7,7 @@ export function Toolbar() {
 				<h3 className="text-ocean-blue">
 					Lima, PE
 				</h3>
-				<h1 className="font-robotoCondensed text-4xl font-bold text-black">
+				<h1 className="pt-2 font-robotoCondensed text-4xl font-bold text-black">
 					ALCOHOLICS
 					<br />
 					ANONYMOUS
