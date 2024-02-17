@@ -13,6 +13,10 @@ const config: Config = {
         robotoCondensed: "var(--font-roboto-condensed)"
       }
     },
+    colors: {
+      'ocean-blue': '#2193B0',
+      'black': '#333333',
+    }
   },
   plugins: [],
 };
