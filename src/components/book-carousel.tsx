@@ -1,7 +1,4 @@
-import {
-	Carousel,
-	Image,
-} from '@/components/carousel'
+import {Carousel, Image} from '@/components/carousel'
 
 const booksImages: Image[] = [
 	{
@@ -12,12 +9,9 @@ const booksImages: Image[] = [
 	{
 		src: '/twelve-steps-traditions.png',
 		alt: 'Twelve Steps and Twelve Traditions',
-		title:
-			'Twelve Steps and Twelve Traditions',
+		title: 'Twelve Steps and Twelve Traditions',
 	},
 ]
 export function BookCarousel() {
-	return (
-		<Carousel images={booksImages} />
-	)
+	return <Carousel images={booksImages} />
 }

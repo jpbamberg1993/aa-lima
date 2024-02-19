@@ -1,21 +1,16 @@
-import { LocationMap } from '@/components/locationMap'
-import { ZoomBtn } from '@/components/zoom-btn'
-import { TextTitle } from '@/components/text-title'
-import { GradientWrapper } from '@/components/gradient-wrapper'
+import {LocationMap} from '@/components/locationMap'
+import {ZoomBtn} from '@/components/zoom-btn'
+import {TextTitle} from '@/components/text-title'
+import {GradientWrapper} from '@/components/gradient-wrapper'
 
 export function MeetingsSection() {
 	return (
 		<GradientWrapper>
 			<TextTitle text="MEETINGS" />
-			<h4 className="text-white pt-2 text-xl font-semibold">
-				FACE TO FACE
-			</h4>
-			<p className="text-white font-light leading-4">
-				Good Shepherd Group
-			</p>
+			<h4 className="pt-2 text-xl font-semibold text-white">FACE TO FACE</h4>
+			<p className="font-light leading-4 text-white">Good Shepherd Group</p>
 			<p className="pt-2 font-medium">
-				Tuesday / Thursday: 7:00pm -
-				8:00pm
+				Tuesday / Thursday: 7:00pm - 8:00pm
 				<br />
 				Saturday: 11:00am
 			</p>
@@ -24,29 +19,19 @@ export function MeetingsSection() {
 				className="block pb-1 pt-5 font-medium"
 				target="_blank"
 			>
-				Anglican Cathedral of the Good
-				Shepherd, Avenida Santa Cruz
-				491, Miraflores
+				Anglican Cathedral of the Good Shepherd, Avenida Santa Cruz 491, Miraflores
 			</a>
 			<LocationMap />
-			<h4 className="text-white pt-5 text-xl font-semibold">
-				ZOOM
-			</h4>
-			<p className="text-white font-light leading-4">
-				Friends of Bill in Lima
-			</p>
+			<h4 className="pt-5 text-xl font-semibold text-white">ZOOM</h4>
+			<p className="font-light leading-4 text-white">Friends of Bill in Lima</p>
 			<p className="pt-2 font-medium">
-				Monday / Wednesday / Friday:
-				12:00pm
+				Monday / Wednesday / Friday: 12:00pm
 				<br />
 				Tuesday: 7:00pm
 				<br />
-				Saturday: 11:30 am - Speaker
-				Meeting
+				Saturday: 11:30 am - Speaker Meeting
 			</p>
-			<p className="pt-2">
-				Password: 12345
-			</p>
+			<p className="pt-2">Password: 12345</p>
 			<ZoomBtn />
 		</GradientWrapper>
 	)

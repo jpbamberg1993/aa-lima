@@ -1,10 +1,6 @@
 'use client'
 
-import {
-	GoogleMap,
-	LoadScript,
-	Marker,
-} from '@react-google-maps/api'
+import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api'
 
 export function LocationMap() {
 	const mapStyle = {
@@ -20,21 +16,13 @@ export function LocationMap() {
 		zoom: 12,
 	}
 	return (
-		<LoadScript
-			googleMapsApiKey={
-				process.env
-					.NEXT_PUBLIC_GOOGLE_MAPS_KEY ??
-				''
-			}
-		>
+		<LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY ?? ''}>
 			<GoogleMap
 				mapContainerStyle={mapStyle}
 				center={defaultProps.center}
 				zoom={defaultProps.zoom}
 			>
-				<Marker
-					position={defaultProps.center}
-				/>
+				<Marker position={defaultProps.center} />
 			</GoogleMap>
 		</LoadScript>
 	)

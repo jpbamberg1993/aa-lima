@@ -3,9 +3,10 @@ module.exports = {
 	"trailingComma": "all",
 	"printWidth": 120,
 	"useTabs": true,
+	"tabWidth": 4,
 	"semi": false,
 	"quoteProps": "as-needed",
-	"bracketLing": false,
+	"bracketSpacing": false,
 	"singleAttributePerLine": true,
 	"plugins": ["prettier-plugin-tailwindcss"]
 }

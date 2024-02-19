@@ -1,5 +1,5 @@
 'use client'
-import { ReactNode } from 'react'
+import {ReactNode} from 'react'
 
 type Props = {
 	children: ReactNode
@@ -8,17 +8,12 @@ type Props = {
 	type?: 'button' | 'submit' | 'reset'
 }
 
-export function ButtonOutline({
-	children,
-	onClick,
-	className = '',
-	type = 'button',
-}: Props) {
+export function ButtonOutline({children, onClick, className = '', type = 'button'}: Props) {
 	return (
 		<button
 			type={type}
 			onClick={onClick}
-			className={`border-sea-green text-sea-green rounded-lg border px-7 py-1 text-sm font-semibold ${className}`}
+			className={`rounded-lg border border-sea-green px-7 py-1 text-sm font-semibold text-sea-green ${className}`}
 		>
 			{children}
 		</button>

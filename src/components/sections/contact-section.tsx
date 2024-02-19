@@ -1,8 +1,5 @@
-import { TextTitle } from '@/components/text-title'
-import {
-	Contact,
-	ContactComponent,
-} from '@/components/contact-component'
+import {TextTitle} from '@/components/text-title'
+import {Contact, ContactComponent} from '@/components/contact-component'
 
 const contacts: Contact[] = [
 	{
@@ -31,21 +28,17 @@ const contacts: Contact[] = [
 export function ContactSection() {
 	return (
 		<section className="p-6">
-			<h5 className="text-center text-xl font-bold text-black">
-				Need Help?
-			</h5>
+			<h5 className="text-center text-xl font-bold text-black">Need Help?</h5>
 			<TextTitle
 				text="Contact Us"
 				color="text-ocean-blue pb-3.5"
 			/>
-			{contacts.map(
-				(contact, index) => (
-					<ContactComponent
-						key={index}
-						{...contact}
-					/>
-				),
-			)}
+			{contacts.map((contact, index) => (
+				<ContactComponent
+					key={index}
+					{...contact}
+				/>
+			))}
 		</section>
 	)
 }
