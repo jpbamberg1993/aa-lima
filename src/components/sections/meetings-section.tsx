@@ -1,10 +1,11 @@
 import { LocationMap } from '@/components/locationMap'
 import { ZoomBtn } from '@/components/zoom-btn'
 import { TextTitle } from '@/components/text-title'
+import { GradientWrapper } from '@/components/gradient-wrapper'
 
 export function MeetingsSection() {
 	return (
-		<section className="to-sea-green w-full bg-gradient-to-b from-ocean-blue px-6 py-6">
+		<GradientWrapper>
 			<TextTitle text="MEETINGS" />
 			<h4 className="text-white pt-2 text-xl font-semibold">
 				FACE TO FACE
@@ -47,6 +48,6 @@ export function MeetingsSection() {
 				Password: 12345
 			</p>
 			<ZoomBtn />
-		</section>
+		</GradientWrapper>
 	)
 }
