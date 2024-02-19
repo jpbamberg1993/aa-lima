@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { TraditionsBtn } from '@/components/traditions-btn'
 
-export function Info() {
+export function InfoSection() {
 	return (
-		<div className="bg-light-grey relative mt-4 h-72 w-full px-6 pt-4">
+		<section className="bg-light-grey relative mt-4 h-72 w-full px-6 pt-4">
 			<Image
 				src="/fellowship.svg"
 				alt="a group of people standing closely"
@@ -28,6 +28,6 @@ export function Info() {
 				recover from alcoholism.
 			</p>
 			<TraditionsBtn />
-		</div>
+		</section>
 	)
 }

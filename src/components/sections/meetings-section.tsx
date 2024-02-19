@@ -2,9 +2,9 @@ import { LocationMap } from '@/components/locationMap'
 import { ZoomBtn } from '@/components/zoom-btn'
 import { TextTitle } from '@/components/text-title'
 
-export function Meetings() {
+export function MeetingsSection() {
 	return (
-		<div className="to-sea-green w-full bg-gradient-to-b from-ocean-blue px-6 py-6">
+		<section className="to-sea-green w-full bg-gradient-to-b from-ocean-blue px-6 py-6">
 			<TextTitle text="MEETINGS" />
 			<h4 className="text-white pt-2 text-xl font-semibold">
 				FACE TO FACE
@@ -47,6 +47,6 @@ export function Meetings() {
 				Password: 12345
 			</p>
 			<ZoomBtn />
-		</div>
+		</section>
 	)
 }
