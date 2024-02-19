@@ -1,6 +1,7 @@
 import { Toolbar } from '@/components/toolbar'
 import { Info } from '@/components/info'
 import { Meetings } from '@/components/meetings'
+import { ContactSection } from '@/components/contact-section'
 
 export default function Home() {
 	return (
@@ -8,6 +9,7 @@ export default function Home() {
 			<Toolbar />
 			<Info />
 			<Meetings />
+			<ContactSection />
 		</main>
 	)
 }

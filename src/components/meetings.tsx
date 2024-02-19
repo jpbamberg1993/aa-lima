@@ -1,12 +1,11 @@
 import { LocationMap } from '@/components/locationMap'
 import { ZoomBtn } from '@/components/zoom-btn'
+import { TextTitle } from '@/components/text-title'
 
 export function Meetings() {
 	return (
 		<div className="to-sea-green w-full bg-gradient-to-b from-ocean-blue px-6 py-6">
-			<h3 className="text-white text-center text-2xl font-semibold">
-				MEETINGS
-			</h3>
+			<TextTitle text="MEETINGS" />
 			<h4 className="text-white pt-2 text-xl font-semibold">
 				FACE TO FACE
 			</h4>
