@@ -13,5 +13,9 @@ const booksImages: Image[] = [
 	},
 ]
 export function BookCarousel() {
-	return <Carousel images={booksImages} />
+	return (
+		<div className="pt-4">
+			<Carousel images={booksImages} />
+		</div>
+	)
 }
