@@ -6,7 +6,7 @@ export function LocationMap() {
 	const mapStyle = {
 		height: '124px',
 		width: '100%',
-		'border-radius': '8px',
+		borderRadius: '8px',
 	}
 	const defaultProps = {
 		center: {
