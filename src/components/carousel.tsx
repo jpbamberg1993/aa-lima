@@ -1,6 +1,6 @@
 'use client'
 import {useState, useEffect, useRef} from 'react'
-import {motion} from 'framer-motion'
+import {AnimatePresence, motion, Variants} from 'framer-motion'
 import Image from 'next/image'
 
 export type Image = {
@@ -13,38 +13,54 @@ type Props = {
 	images: Image[]
 }
 
+const imageWidth = 130
+
+const variants: Variants = {
+	initial: (direction: number) => ({
+		x: direction > 0 ? imageWidth : -imageWidth,
+		opacity: 0,
+	}),
+	animate: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			x: {type: 'spring', stiffness: 300, damping: 30},
+			opacity: {duration: 0.2},
+		},
+	},
+	exit: (direction: number) => ({
+		x: direction > 0 ? -imageWidth : imageWidth,
+		opacity: 0,
+		transition: {
+			x: {type: 'spring', stiffness: 300, damping: 30},
+			opacity: {duration: 0.2},
+		},
+	}),
+}
+
 export function Carousel({images}: Props) {
-	const [width, setWidth] = useState(0)
-	const carouselRef = useRef<HTMLDivElement>(null)
-	const [activeIndex, setActiveIndex] = useState(0)
-	useEffect(() => {
-		if (!carouselRef.current) {
-			setWidth(500)
-			return
-		}
-		setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth)
-	}, [])
+	const [index, setIndex] = useState(0)
+	const [direction, setDirection] = useState(0)
 	function nextSlide() {
-		if (carouselRef.current) {
-			carouselRef.current.scrollBy({left: 130, behavior: 'smooth'})
+		setDirection(1)
+		if (index === images.length - 1) {
+			setIndex(0)
+		} else {
+			setIndex(index + 1)
 		}
 	}
 	function prevSlide() {
-		if (carouselRef.current) {
-			carouselRef.current.scrollBy({left: -130, behavior: 'smooth'})
+		setDirection(-1)
+		if (index === 0) {
+			setIndex(images.length - 1)
+		} else {
+			setIndex(index - 1)
 		}
 	}
-
-	const activeImage = images[activeIndex]
+	const activeImage = images[index]
 	return (
-		<div
-			className="relative mx-auto justify-items-center rounded-lg bg-[#fff] pb-9 pt-5"
-			style={{
-				gridTemplateRows: 'auto 180px',
-			}}
-		>
+		<div className="relative rounded-lg bg-[#fff] pb-9 pt-5">
 			<h6 className="col-span-full pb-2 text-center font-light text-black">{activeImage.title}</h6>
-			{/* Use memo to avoid re rendering images */}
 			<button
 				onClick={prevSlide}
 				className={`absolute top-1/2`}
@@ -56,32 +72,29 @@ export function Carousel({images}: Props) {
 					height="31"
 				/>
 			</button>
-			<motion.div
-				className={`mx-auto grid w-[80%] cursor-grab overflow-hidden px-2`}
-				ref={carouselRef}
-				whileTap={{cursor: 'grabbing'}}
-			>
-				<motion.div
-					className={`flex`}
-					drag={`x`}
-					dragConstraints={{right: 90, left: -width}}
+			<div className={`relative mx-auto flex h-[200px] w-[260px] justify-center overflow-hidden align-middle`}>
+				<AnimatePresence
+					initial={false}
+					custom={direction}
 				>
-					{images.map((image, index) => (
-						<motion.div
-							key={index}
-							className={`m-2 min-w-[130px]`}
-						>
-							<Image
-								src={image.src}
-								alt={image.alt}
-								className={`pointer-events-none transform transition-transform duration-300 ease-in ease-out hover:scale-110`}
-								width="130"
-								height="200"
-							/>
-						</motion.div>
-					))}
-				</motion.div>
-			</motion.div>
+					<motion.div
+						variants={variants}
+						initial="initial"
+						animate="animate"
+						exit="exit"
+						custom={direction}
+						key={activeImage.src}
+						className={`absolute`}
+					>
+						<Image
+							src={activeImage.src}
+							alt={activeImage.alt}
+							width="130"
+							height="200"
+						/>
+					</motion.div>
+				</AnimatePresence>
+			</div>
 			<button
 				onClick={nextSlide}
 				className={`absolute right-0 top-1/2`}
