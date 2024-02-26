@@ -16,7 +16,7 @@ type Props = {
 const imageWidth = 130
 
 const variants: Variants = {
-	initial: (direction: number) => ({
+	enter: (direction: number) => ({
 		x: direction > 0 ? imageWidth : -imageWidth,
 		opacity: 0,
 	}),
@@ -36,6 +36,11 @@ const variants: Variants = {
 			opacity: {duration: 0.2},
 		},
 	}),
+}
+
+const swipeConfidenceThreshold = 10000
+function swipePower(offset: number, velocity: number) {
+	return Math.abs(offset) * velocity
 }
 
 export function Carousel({images}: Props) {
@@ -79,9 +84,24 @@ export function Carousel({images}: Props) {
 				>
 					<motion.div
 						variants={variants}
-						initial="initial"
+						initial="enter"
 						animate="animate"
 						exit="exit"
+						transition={{
+							x: {type: 'spring', stiffness: 300, damping: 30},
+							opacity: {duration: 0.2},
+						}}
+						drag="x"
+						dragConstraints={{left: 0, right: 0}}
+						dragElastic={1}
+						onDragEnd={(e, {offset, velocity}) => {
+							const swipe = swipePower(offset.x, velocity.x)
+							if (swipe < -swipeConfidenceThreshold) {
+								nextSlide()
+							} else if (swipe > swipeConfidenceThreshold) {
+								prevSlide()
+							}
+						}}
 						custom={direction}
 						key={activeImage.src}
 						className={`absolute`}
@@ -89,6 +109,7 @@ export function Carousel({images}: Props) {
 						<Image
 							src={activeImage.src}
 							alt={activeImage.alt}
+							className={`pointer-events-none`}
 							width="130"
 							height="200"
 						/>
