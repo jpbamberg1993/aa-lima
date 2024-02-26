@@ -59,11 +59,11 @@ export function Carousel({images}: Props) {
 	}
 	const activeImage = images[index]
 	return (
-		<div className="relative rounded-lg bg-[#fff] pb-9 pt-5">
-			<h6 className="col-span-full pb-2 text-center font-light text-black">{activeImage.title}</h6>
+		<div className="relative grid grid-cols-[1fr_auto_1fr] justify-items-center rounded-lg bg-[#fff] pb-9 pt-5">
+			<h6 className="col-span-full max-w-48 pb-2 text-center font-light text-black">{activeImage.title}</h6>
 			<button
 				onClick={prevSlide}
-				className={`absolute top-1/2`}
+				className={`mt-[-20px]`}
 			>
 				<Image
 					src="/arrow.png"
@@ -97,7 +97,7 @@ export function Carousel({images}: Props) {
 			</div>
 			<button
 				onClick={nextSlide}
-				className={`absolute right-0 top-1/2`}
+				className={`mt-[-20px]`}
 			>
 				<Image
 					src="/arrow.png"
