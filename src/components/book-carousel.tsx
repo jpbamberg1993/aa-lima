@@ -11,26 +11,6 @@ const booksImages: Image[] = [
 		alt: 'Twelve Steps and Twelve Traditions',
 		title: 'Twelve Steps and Twelve Traditions',
 	},
-	{
-		src: '/twelve-steps-traditions.png',
-		alt: 'Twelve Steps and Twelve Traditions',
-		title: 'Twelve Steps and Twelve Traditions',
-	},
-	{
-		src: '/twelve-steps-traditions.png',
-		alt: 'Twelve Steps and Twelve Traditions',
-		title: 'Twelve Steps and Twelve Traditions',
-	},
-	{
-		src: '/twelve-steps-traditions.png',
-		alt: 'Twelve Steps and Twelve Traditions',
-		title: 'Twelve Steps and Twelve Traditions',
-	},
-	{
-		src: '/twelve-steps-traditions.png',
-		alt: 'Twelve Steps and Twelve Traditions',
-		title: 'Twelve Steps and Twelve Traditions',
-	},
 ]
 export function BookCarousel() {
 	return (
