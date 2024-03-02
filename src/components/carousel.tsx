@@ -1,5 +1,5 @@
 'use client'
-import {useState, useEffect, useRef} from 'react'
+import {useState} from 'react'
 import {AnimatePresence, motion, Variants} from 'framer-motion'
 import Image from 'next/image'
 
@@ -77,7 +77,7 @@ export function Carousel({images}: Props) {
 					height="31"
 				/>
 			</button>
-			<div className={`relative mx-auto flex h-[200px] w-[260px] justify-center overflow-hidden align-middle`}>
+			<div className={`relative mx-auto flex h-[200px] w-[130px] justify-center overflow-hidden align-middle`}>
 				<AnimatePresence
 					initial={false}
 					custom={direction}
@@ -94,7 +94,7 @@ export function Carousel({images}: Props) {
 						drag="x"
 						dragConstraints={{left: 0, right: 0}}
 						dragElastic={1}
-						onDragEnd={(e, {offset, velocity}) => {
+						onDragEnd={(_, {offset, velocity}) => {
 							const swipe = swipePower(offset.x, velocity.x)
 							if (swipe < -swipeConfidenceThreshold) {
 								nextSlide()
