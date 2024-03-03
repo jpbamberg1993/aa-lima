@@ -1,17 +1,6 @@
-import {Carousel, Image} from '@/components/carousel'
+import {Carousel} from '@/components/carousel'
+import {booksImages} from '@/data/books'
 
-const booksImages: Image[] = [
-	{
-		src: '/big-book.png',
-		alt: 'Big Book',
-		title: 'Big Book',
-	},
-	{
-		src: '/twelve-steps-traditions.png',
-		alt: 'Twelve Steps and Twelve Traditions',
-		title: 'Twelve Steps and Twelve Traditions',
-	},
-]
 export function BookCarousel() {
 	return (
 		<div className="pt-4">
