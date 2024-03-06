@@ -7,7 +7,7 @@ import {TraditionsSection} from '@/components/sections/traditions-section'
 
 export default function Home() {
 	return (
-		<main className="container mx-auto max-w-[430px] py-4">
+		<main className="container mx-auto max-w-[430px] pt-4">
 			<Toolbar />
 			<InfoSection />
 			<MeetingsSection />

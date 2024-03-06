@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type {Config} from 'tailwindcss'
 
 const config: Config = {
 	content: [
@@ -10,8 +10,7 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				sans: 'var(--font-inter)',
-				robotoCondensed:
-					'var(--font-roboto-condensed)',
+				robotoCondensed: 'var(--font-roboto-condensed)',
 			},
 		},
 		colors: {

@@ -27,7 +27,12 @@ export default function RootLayout({
 			lang="en"
 			className={`${inter.variable} ${robotoCondensed.variable}`}
 		>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				{children}
+				<footer className="flex h-20 items-center justify-center">
+					<p className="font-semibold text-black">©AALima.org | All Rights Reserved</p>
+				</footer>
+			</body>
 		</html>
 	)
 }
