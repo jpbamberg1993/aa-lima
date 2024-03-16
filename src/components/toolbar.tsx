@@ -1,7 +1,7 @@
 'use client'
 import {useState} from 'react'
 import {IoMenuOutline} from 'react-icons/io5'
-import {NavLink} from '@/components/nav-link'
+import {NavigationMenu} from '@/components/navigation-menu'
 
 export function Toolbar() {
 	const [displayMenu, setDisplayMenu] = useState(false)
@@ -28,45 +28,10 @@ export function Toolbar() {
 						size={45}
 					/>
 				</button>
-				{displayMenu && (
-					<div
-						id="mobileOverlay"
-						className="fixed inset-0 z-50 flex h-full items-center justify-center overflow-auto bg-white align-middle"
-					>
-						<ul className="text-center text-xl font-bold text-black">
-							<NavLink
-								href="#home"
-								text="Home"
-								closeNav={toggleDisplayMenu}
-							/>
-							<NavLink
-								href="#meetings"
-								text="Meetings"
-								closeNav={toggleDisplayMenu}
-							/>
-							<NavLink
-								href="#contact"
-								text="Contact Us"
-								closeNav={toggleDisplayMenu}
-							/>
-							<NavLink
-								href="#reading"
-								text="Reading Material"
-								closeNav={toggleDisplayMenu}
-							/>
-							<NavLink
-								href="https://www.aa.org/self-assessment"
-								text="Self-Assessment"
-								closeNav={toggleDisplayMenu}
-							/>
-							<NavLink
-								href="#traditions"
-								text="12 Traditions"
-								closeNav={toggleDisplayMenu}
-							/>
-						</ul>
-					</div>
-				)}
+				<NavigationMenu
+					displayMenu={displayMenu}
+					toggleDisplayMenu={toggleDisplayMenu}
+				/>
 			</div>
 		</section>
 	)
