@@ -27,7 +27,10 @@ const contacts: Contact[] = [
 
 export function ContactSection() {
 	return (
-		<section className="p-6">
+		<section
+			className="p-6"
+			id="contact"
+		>
 			<h5 className="text-center text-xl font-bold text-black">Need Help?</h5>
 			<TextTitle
 				text="Contact Us"

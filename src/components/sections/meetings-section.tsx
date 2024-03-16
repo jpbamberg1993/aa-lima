@@ -5,7 +5,7 @@ import {GradientWrapper} from '@/components/gradient-wrapper'
 
 export function MeetingsSection() {
 	return (
-		<GradientWrapper>
+		<GradientWrapper id="meetings">
 			<TextTitle text="MEETINGS" />
 			<h4 className="pt-2 text-xl font-semibold text-white">FACE TO FACE</h4>
 			<p className="font-light leading-4 text-white">Good Shepherd Group</p>

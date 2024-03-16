@@ -11,7 +11,7 @@ export function ReadingMaterialSection() {
 	}
 
 	return (
-		<GradientWrapper>
+		<GradientWrapper id="reading">
 			<TextTitle text="Reading Material" />
 			<BookCarousel />
 			<div className="flex flex-col justify-center pb-2 pt-12">

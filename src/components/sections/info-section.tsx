@@ -3,7 +3,10 @@ import {TraditionsBtn} from '@/components/traditions-btn'
 
 export function InfoSection() {
 	return (
-		<section className="relative mt-4 h-72 w-full bg-light-grey px-6 pt-4">
+		<section
+			className="relative mt-4 h-72 w-full bg-light-grey px-6 pt-4"
+			id="traditions"
+		>
 			<Image
 				src="/fellowship.svg"
 				alt="a group of people standing closely"

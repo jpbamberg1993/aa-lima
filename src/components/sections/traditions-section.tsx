@@ -3,7 +3,10 @@ import {traditions} from '@/data/traditions'
 
 export function TraditionsSection() {
 	return (
-		<section className="bg-ocean-blue px-12 py-7">
+		<section
+			className="bg-ocean-blue px-12 py-7"
+			id="traditions"
+		>
 			<TextTitle text={'12 TRADITIONS'} />
 			<p className="pb-4 pt-5 text-center font-light leading-5 text-white">
 				The Twelve Traditions provide guidelines for relationships between the groups, members, the global
