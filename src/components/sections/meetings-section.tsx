@@ -31,7 +31,7 @@ export function MeetingsSection() {
 				<br />
 				Saturday: 11:30 am - Speaker Meeting
 			</p>
-			<p className="pt-2">Password: 12345</p>
+			<p className="pt-2 text-white">Password: 12345</p>
 			<ZoomBtn />
 		</GradientWrapper>
 	)
