@@ -6,12 +6,8 @@ const contacts: Contact[] = [
 		city: 'Lima',
 		name: 'Luis S.',
 		phone: '+51 959 785 979',
+		note: '(call or whatsapp)',
 		email: 'aagrouplima@gmail.com',
-	},
-	{
-		city: 'Cusco',
-		name: 'Gustavo V.',
-		phone: '+51 910 622 682',
 	},
 	{
 		city: 'Iquitos',

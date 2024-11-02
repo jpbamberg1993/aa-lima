@@ -19,7 +19,8 @@ export function MeetingsSection() {
 				className="block pb-1 pt-5 font-medium text-white"
 				target="_blank"
 			>
-				Anglican Cathedral of the Good Shepherd, Avenida Santa Cruz 491, Miraflores
+				Anglican Cathedral of the Good Shepherd, Avenida Santa Cruz 491, Miraflores (enter through wooden side
+				door around the corner)
 			</a>
 			<LocationMap />
 			<h4 className="pt-5 text-xl font-semibold text-white">ZOOM</h4>
@@ -29,7 +30,7 @@ export function MeetingsSection() {
 				<br />
 				Tuesday: 7:00pm
 				<br />
-				Saturday: 11:30 am - Speaker Meeting
+				Sunday: 11:00 am - Speaker Meeting
 			</p>
 			<p className="pt-2 text-white">Password: 12345</p>
 			<ZoomBtn />
