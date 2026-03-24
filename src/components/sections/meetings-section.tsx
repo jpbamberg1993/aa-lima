@@ -7,12 +7,18 @@ export function MeetingsSection() {
 	return (
 		<GradientWrapper id="meetings">
 			<TextTitle text="MEETINGS" />
-			<h4 className="pt-2 text-xl font-semibold text-white">FACE TO FACE</h4>
+			<h4 className="pt-2 text-xl font-semibold text-white">
+				FACE TO FACE
+				<br />
+				(All time are Peru time)
+			</h4>
 			<p className="font-light leading-4 text-white">Good Shepherd Group</p>
 			<p className="pt-2 font-medium text-white">
 				Tuesday / Thursday: 7:00pm - 8:00pm
 				<br />
-				Saturday: 11:00am
+				Friday: 5pm
+				<br />
+				Saturday & Sunday: 11:00am
 			</p>
 			<a
 				href="https://www.google.com/maps/dir//Av.+Sta.+Cruz+491,+Miraflores+15074,+Peru/@-12.109077,-77.0384462,15.87z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105c8400bbac97b:0xe31c83c887391f17!2m2!1d-77.0346723!2d-12.1078656?entry=ttu"
@@ -24,14 +30,13 @@ export function MeetingsSection() {
 			</a>
 			<LocationMap />
 			<h4 className="pt-5 text-xl font-semibold text-white">ZOOM</h4>
-			<p className="font-light leading-4 text-white">Friends of Bill in Lima</p>
-			<p className="pt-2 font-medium text-white">
-				Monday / Wednesday / Friday: 12:00pm
+			<p className="font-light leading-4 text-white">
+				Friends of Bill in Lima
 				<br />
-				Tuesday: 7:00pm
-				<br />
-				Sunday: 11:00 am - Speaker Meeting
+				(All time are Peru time)
 			</p>
+			<p className="pt-2 font-medium text-white">Monday / Wednesday / Friday: 12:00pm (noon)</p>
+			<p className="pt-2 text-white">Meeting ID: 836 0006 1434</p>
 			<p className="pt-2 text-white">Password: 12345</p>
 			<ZoomBtn />
 		</GradientWrapper>
