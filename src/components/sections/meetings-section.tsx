@@ -7,13 +7,9 @@ export function MeetingsSection() {
 	return (
 		<GradientWrapper id="meetings">
 			<TextTitle text="MEETINGS" />
-			<h4 className="pt-2 text-xl font-semibold text-white">
-				FACE TO FACE
-				<br />
-				(All time are Peru time)
-			</h4>
-			<p className="font-light leading-4 text-white">Good Shepherd Group</p>
-			<p className="pt-2 font-medium text-white">
+			<h4 className="pt-2 text-xl font-semibold text-white">FACE TO FACE</h4>
+			<p className="font-light leading-4 text-white">Good Shepherd Group (All time are Peru time)</p>
+			<p className="pb-2 pt-2 font-medium text-white">
 				Tuesday / Thursday: 7:00pm - 8:00pm
 				<br />
 				Friday: 5pm
@@ -30,11 +26,7 @@ export function MeetingsSection() {
 			</a>
 			<LocationMap />
 			<h4 className="pt-5 text-xl font-semibold text-white">ZOOM</h4>
-			<p className="font-light leading-4 text-white">
-				Friends of Bill in Lima
-				<br />
-				(All time are Peru time)
-			</p>
+			<p className="font-light leading-4 text-white">Friends of Bill in Lima (All time are Peru time)</p>
 			<p className="pt-2 font-medium text-white">Monday / Wednesday / Friday: 12:00pm (noon)</p>
 			<p className="pt-2 text-white">Meeting ID: 836 0006 1434</p>
 			<p className="pt-2 text-white">Password: 12345</p>
