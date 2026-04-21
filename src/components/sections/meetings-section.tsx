@@ -12,9 +12,11 @@ export function MeetingsSection() {
 			<p className="pb-2 pt-2 font-medium text-white">
 				Tuesday / Thursday: 7:00pm - 8:00pm
 				<br />
-				Friday: 5pm
+				Friday: 5:00pm
 				<br />
-				Saturday & Sunday: 11:00am
+				Saturday: 11:00am
+				<br />
+				Sunday: 12:00pm (noon)
 			</p>
 			<a
 				href="https://www.google.com/maps/dir//Av.+Sta.+Cruz+491,+Miraflores+15074,+Peru/@-12.109077,-77.0384462,15.87z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105c8400bbac97b:0xe31c83c887391f17!2m2!1d-77.0346723!2d-12.1078656?entry=ttu"
