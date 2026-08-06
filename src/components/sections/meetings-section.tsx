@@ -29,7 +29,7 @@ export function MeetingsSection() {
 			<LocationMap />
 			<h4 className="pt-5 text-xl font-semibold text-white">ZOOM</h4>
 			<p className="font-light leading-4 text-white">Friends of Bill in Lima (All time are Peru time)</p>
-			<p className="pt-2 font-medium text-white">Monday / Wednesday / Friday: 12:00pm (noon)</p>
+			<p className="pt-2 font-medium text-white">Monday: 12:00pm (noon)</p>
 			<p className="pt-2 text-white">Meeting ID: 836 0006 1434</p>
 			<p className="pt-2 text-white">Password: 12345</p>
 			<ZoomBtn />
